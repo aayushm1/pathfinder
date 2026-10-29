@@ -214,7 +214,7 @@ svg{display:block}
 .toast svg{color:#4ADE80}
 @keyframes toast{from{opacity:0;transform:translateY(10px)}}
 
-/* ---------- Copilot chat ---------- */
+/* ---------- Ask Pathfinder chat ---------- */
 .chat-wrap{display:grid;grid-template-columns:1fr 320px;gap:18px;height:calc(100vh - 64px - 26px - 60px - 70px);min-height:560px}
 .chat{display:flex;flex-direction:column;min-height:0;overflow:hidden}
 .chat-scroll{flex:1;overflow-y:auto;padding:22px 26px;scroll-behavior:smooth}

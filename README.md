@@ -1,26 +1,26 @@
 <div align="center">
 
-# ✨ Pathfinder: HR Roadmap Copilot
+# ✨ Pathfinder: AI People Strategy Platform
 
 ### HR leaders get a people-practices report card once a year. Pathfinder makes it useful all year round.
 
-An AI copilot that turns annual HR assessment and benchmark results into a living people strategy. It explains the gaps, builds a prioritised roadmap, tracks execution across countries, proves the business impact in euros, and pre-fills next year's assessment.
+An AI-powered platform that turns annual HR assessment and benchmark results into a living people strategy. It explains the gaps, builds a prioritised roadmap, tracks execution across countries, proves the business impact in euros, and pre-fills next year's assessment.
 
 <br>
 
-[**▶ Open the live prototype**](https://aayushm1.github.io/hr-roadmap-copilot/) &nbsp;·&nbsp; [**🎬 Start the 3-minute guided demo**](https://aayushm1.github.io/hr-roadmap-copilot/?tour=1) &nbsp;·&nbsp; [How it works (plain English)](HOW-IT-WORKS.md)
+[**▶ Open the live prototype**](https://aayushm1.github.io/pathfinder/) &nbsp;·&nbsp; [**🎬 Start the 3-minute guided demo**](https://aayushm1.github.io/pathfinder/?tour=1) &nbsp;·&nbsp; [How it works (plain English)](HOW-IT-WORKS.md)
 
 <br>
 
 ![Domain](https://img.shields.io/badge/domain-HR%20Tech%20%C2%B7%20People%20Analytics-5B4BF5)
-![Type](https://img.shields.io/badge/type-B2B%20SaaS%20%C2%B7%20AI%20copilot-0EA5A4)
+![Type](https://img.shields.io/badge/type-B2B%20SaaS%20%C2%B7%20AI%20platform-0EA5A4)
 ![Role](https://img.shields.io/badge/role-Senior%20Product%20Management-F59E0B)
 ![Stack](https://img.shields.io/badge/stack-Vanilla%20JS%20%C2%B7%20zero%20dependencies-0B1129)
 ![Data](https://img.shields.io/badge/data-100%25%20fictional-16A34A)
 
 <br>
 
-<a href="https://aayushm1.github.io/hr-roadmap-copilot/"><img src="docs/screenshots/overview.jpg" alt="Pathfinder overview dashboard: people score vs peers, journey stage, KPIs and AI nudges" width="100%"></a>
+<a href="https://aayushm1.github.io/pathfinder/"><img src="docs/screenshots/overview.jpg" alt="Pathfinder overview dashboard: people score vs peers, journey stage, KPIs and AI nudges" width="100%"></a>
 
 </div>
 
@@ -106,32 +106,32 @@ As the company matures, the same product moves with it: **Fix** (close gaps) →
 
 <table>
 <tr>
-<td width="50%"><a href="https://aayushm1.github.io/hr-roadmap-copilot/#/copilot"><img src="docs/screenshots/copilot.jpg" alt="Ask Pathfinder AI analyst"></a></td>
-<td width="50%"><a href="https://aayushm1.github.io/hr-roadmap-copilot/#/roadmap"><img src="docs/screenshots/roadmap.jpg" alt="AI roadmap with priority sliders and impact/effort matrix"></a></td>
+<td width="50%"><a href="https://aayushm1.github.io/pathfinder/#/ask"><img src="docs/screenshots/ask.jpg" alt="Ask Pathfinder AI analyst"></a></td>
+<td width="50%"><a href="https://aayushm1.github.io/pathfinder/#/roadmap"><img src="docs/screenshots/roadmap.jpg" alt="AI roadmap with priority sliders and impact/effort matrix"></a></td>
 </tr>
 <tr>
 <td><b>Ask Pathfinder.</b> An AI analyst that shows its reasoning steps, cites the exact survey items behind each claim, and ends with one-click actions. It traces the Onboarding drop (71 → 58) to three root causes.</td>
 <td><b>AI roadmap.</b> Business-priority sliders re-rank initiatives live. Includes an impact/effort matrix, a dependency-sequenced timeline, a projected score, and a step-by-step replay of how the plan was built.</td>
 </tr>
 <tr>
-<td><a href="https://aayushm1.github.io/hr-roadmap-copilot/#/countries"><img src="docs/screenshots/countries.jpg" alt="Country heatmap and acquisition alert"></a></td>
-<td><a href="https://aayushm1.github.io/hr-roadmap-copilot/#/outcomes"><img src="docs/screenshots/outcomes.jpg" alt="Outcomes: pilot vs non-pilot attrition"></a></td>
+<td><a href="https://aayushm1.github.io/pathfinder/#/countries"><img src="docs/screenshots/countries.jpg" alt="Country heatmap and acquisition alert"></a></td>
+<td><a href="https://aayushm1.github.io/pathfinder/#/outcomes"><img src="docs/screenshots/outcomes.jpg" alt="Outcomes: pilot vs non-pilot attrition"></a></td>
 </tr>
 <tr>
 <td><b>Countries.</b> A heatmap of gap topics across 12 countries. Using HR-system data, Pathfinder spots that 700 employees from a recent acquisition aren't covered by any programme, and creates a 100-day fix in one click.</td>
 <td><b>Outcomes.</b> Pilot vs non-pilot comparison from HR and engagement data: new-hire attrition −46%, eNPS +9. A transparent calculation shows ≈ €2.3M a year in avoided cost.</td>
 </tr>
 <tr>
-<td><a href="https://aayushm1.github.io/hr-roadmap-copilot/?report=1#/report"><img src="docs/screenshots/report.jpg" alt="One-click board report"></a></td>
-<td><a href="https://aayushm1.github.io/hr-roadmap-copilot/#/readiness"><img src="docs/screenshots/readiness.jpg" alt="Next assessment readiness"></a></td>
+<td><a href="https://aayushm1.github.io/pathfinder/?report=1#/report"><img src="docs/screenshots/report.jpg" alt="One-click board report"></a></td>
+<td><a href="https://aayushm1.github.io/pathfinder/#/readiness"><img src="docs/screenshots/readiness.jpg" alt="Next assessment readiness"></a></td>
 </tr>
 <tr>
 <td><b>Board report.</b> Builds 5 board slides from live data in about 10 seconds: where we stand, what we're doing, early proof, and the decisions we need. Exports to PDF.</td>
 <td><b>Next assessment readiness.</b> 137 of 214 survey items are already pre-filled from evidence gathered during the year. Drop in a document and the AI maps it to survey items with a confidence score.</td>
 </tr>
 <tr>
-<td><a href="https://aayushm1.github.io/hr-roadmap-copilot/#/results"><img src="docs/screenshots/results.jpg" alt="Results and benchmarks"></a></td>
-<td><a href="https://aayushm1.github.io/hr-roadmap-copilot/#/advisor"><img src="docs/screenshots/advisor.jpg" alt="Provider advisor console"></a></td>
+<td><a href="https://aayushm1.github.io/pathfinder/#/results"><img src="docs/screenshots/results.jpg" alt="Results and benchmarks"></a></td>
+<td><a href="https://aayushm1.github.io/pathfinder/#/advisor"><img src="docs/screenshots/advisor.jpg" alt="Provider advisor console"></a></td>
 </tr>
 <tr>
 <td><b>Results & benchmarks.</b> 6 domains and 20 topics vs a switchable peer group (4 benchmark sets), with gap and strength filters.</td>
@@ -149,7 +149,7 @@ As the company matures, the same product moves with it: **Fix** (close gaps) →
 | **Recommend, don't automate** | Pathfinder suggests, ranks and drafts. HR approves. Accountability stays with the client, and advisors stay in the loop. |
 | **The next assessment is built into the workflow** | Evidence captured while executing initiatives flows straight into next year's survey. This creates the habit loop: users have a reason to log in every month, not once a year. |
 | **Prove it in euros, with the method shown** | The CFO decides renewals. Outcomes compare pilot and non-pilot countries, show the calculation, and label it as correlation. |
-| **Advisory gets leads, not competition** | Stuck initiatives and repeated questions become qualified advisory leads, so the copilot grows the services business instead of eating it. |
+| **Advisory gets leads, not competition** | Stuck initiatives and repeated questions become qualified advisory leads, so Pathfinder grows the services business instead of eating it. |
 | **Privacy by design** | Peer data is only shown for groups of 10+ organisations. Employee data is only shown as aggregates of 20+ people. No company can be identified. |
 | **One product, two personas** | The same data powers the client workspace and the provider's advisor console. Value to the client becomes visible to the business. |
 
@@ -170,7 +170,7 @@ As the company matures, the same product moves with it: **Fix** (close gaps) →
 | ⭐ **North star** | Monthly active client accounts outside assessment season | 60% |
 | Retention | Gross revenue retention | 88% → 94% |
 | Expansion | Net revenue retention (scope upgrades, add-ons) | → 112% |
-| Client value | Avg. score uplift, copilot users vs non-users | +2.5 pts |
+| Client value | Avg. score uplift, Pathfinder users vs non-users | +2.5 pts |
 | Efficiency | Survey completion time / audit hours per client | −40% / −30% |
 | Guardrail | Share of AI answers with valid citations | 100% |
 | Guardrail | AI answers flagged as wrong by users | < 2% |
@@ -189,7 +189,7 @@ As the company matures, the same product moves with it: **Fix** (close gaps) →
 |---|---|
 | **Confidentiality of peer data** | Groups of 10+ only, aggregated, no company can be identified |
 | **AI accuracy and trust** | Retrieval from validated data only, mandatory citations, a human approves every change, and an answer-feedback loop |
-| **Cannibalising advisory** | The copilot produces leads for advisors and gives them better briefs |
+| **Cannibalising advisory** | Pathfinder produces leads for advisors and gives them better briefs |
 | **Adoption by busy HR teams** | Lead with the board report and survey pre-fill, which save real hours from week one |
 | **Over-claiming impact** | Pilot vs control design, the method shown on screen, and explicit "correlation, not causation" labels |
 
@@ -197,12 +197,12 @@ As the company matures, the same product moves with it: **Fix** (close gaps) →
 
 | Try this | Link |
 |---|---|
-| The full guided demo (13 steps) | [`?tour=1`](https://aayushm1.github.io/hr-roadmap-copilot/?tour=1) |
-| Ask the AI why Onboarding dropped | [`#/copilot?ask=…`](https://aayushm1.github.io/hr-roadmap-copilot/?ask=Why%20did%20our%20Onboarding%20score%20drop%3F#/copilot) |
-| Drag **Cost discipline** to 100 and watch quick wins move up | [Roadmap](https://aayushm1.github.io/hr-roadmap-copilot/#/roadmap) |
-| Click **Create 100-day integration initiative**, then check the new projected score | [Countries](https://aayushm1.github.io/hr-roadmap-copilot/#/countries) |
-| Open **Wellbeing Framework 2.0** → **Draft escalation to CFO** | [Initiatives](https://aayushm1.github.io/hr-roadmap-copilot/#/initiatives) |
-| Switch to the provider's side | [Advisor view](https://aayushm1.github.io/hr-roadmap-copilot/#/advisor) |
+| The full guided demo (13 steps) | [`?tour=1`](https://aayushm1.github.io/pathfinder/?tour=1) |
+| Ask the AI why Onboarding dropped | [`#/ask?ask=…`](https://aayushm1.github.io/pathfinder/?ask=Why%20did%20our%20Onboarding%20score%20drop%3F#/ask) |
+| Drag **Cost discipline** to 100 and watch quick wins move up | [Roadmap](https://aayushm1.github.io/pathfinder/#/roadmap) |
+| Click **Create 100-day integration initiative**, then check the new projected score | [Countries](https://aayushm1.github.io/pathfinder/#/countries) |
+| Open **Wellbeing Framework 2.0** → **Draft escalation to CFO** | [Initiatives](https://aayushm1.github.io/pathfinder/#/initiatives) |
+| Switch to the provider's side | [Advisor view](https://aayushm1.github.io/pathfinder/#/advisor) |
 
 Other questions to ask the AI: *"Summarise our position for my CEO"* · *"Which country is lagging and why?"* · *"How can we de-risk the wellbeing initiative?"* · *"Is the roadmap actually working?"* · *"What if we deliver the whole roadmap?"*
 
@@ -217,7 +217,7 @@ assets/js/data.js       all fictional data: scores, initiatives, countries, peer
 assets/js/charts.js     dependency-free SVG charts (radar, line, matrix, ring, bars) + icon set
 assets/js/app.js        state, hash router, layout, drawer/modal/toast, deep links
 assets/js/views.js      every screen
-assets/js/copilot.js    the grounded AI analyst (intent routing, streaming, cited blocks)
+assets/js/ask.js    the grounded AI analyst (intent routing, streaming, cited blocks)
 assets/js/tour.js       13-step guided demo with spotlight
 docs/screenshots/       README images
 ```
@@ -240,8 +240,8 @@ flowchart LR
 ### Run locally
 
 ```bash
-git clone https://github.com/aayushm1/hr-roadmap-copilot.git
-cd hr-roadmap-copilot
+git clone https://github.com/aayushm1/pathfinder.git
+cd pathfinder
 npx serve .
 ```
 

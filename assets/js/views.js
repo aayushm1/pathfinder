@@ -23,7 +23,7 @@
     const g = gaps().slice(0, 5);
     return `
     <div class="page-head"><div><div class="eyebrow">${IC('sparkles', 13)} Good morning, Maria</div><h1>Your people strategy at a glance</h1><p>Six months into your 2027 roadmap. Here is where you stand, what's working, and what needs you this week.</p></div>
-      <div class="actions"><button class="btn sec" data-go="report">${IC('present', 15)} Board report</button><button class="btn pri" data-go="copilot">${IC('sparkles', 15)} Ask Pathfinder</button></div></div>
+      <div class="actions"><button class="btn sec" data-go="report">${IC('present', 15)} Board report</button><button class="btn pri" data-go="ask">${IC('sparkles', 15)} Ask Pathfinder</button></div></div>
 
     <div class="grid g12">
       <div class="card hero s5" id="t-score"><div class="card-b" style="padding:22px">
@@ -128,8 +128,8 @@
     H.$$('[data-rf]').forEach(b => b.onclick = () => { S.resultsFilter = b.dataset.rf; H.render(); });
   };
 
-  /* ======================= COPILOT ======================= */
-  V.copilot = () => `
+  /* ======================= ASK PATHFINDER ======================= */
+  V.ask = () => `
     <div class="page-head" style="margin-bottom:16px"><div><div class="eyebrow">${IC('sparkles', 13)} Diagnose</div><h1>Ask Pathfinder</h1><p>An AI analyst that only answers from your validated results, evidence and anonymised peer benchmarks, and shows its sources.</p></div>
       <div class="actions"><button class="btn sec sm" data-action="clearChat">${IC('refresh', 14)} New conversation</button></div></div>
     <div class="chat-wrap">
@@ -147,7 +147,7 @@
         </div></div>
       </div>
     </div>`;
-  V.after_copilot = () => COP.mount();
+  V.after_ask = () => COP.mount();
 
   /* ======================= ROADMAP ======================= */
   V.roadmap = () => {
@@ -514,13 +514,13 @@
       <div class="grid g3" style="gap:24px">
         <div><div class="tiny muted">THE PROBLEM</div><div class="b" style="font-size:17px;margin-top:6px">The annual assessment delivers value once a year</div><div class="small muted" style="margin-top:6px">Survey → audit → report → silence for 9 months. Insights sit in a PDF, renewal gets harder to justify, and advisory is the only way to act on the insights. That needs one advisor per engagement.</div></div>
         <div><div class="tiny muted">THE INSIGHT</div><div class="b" style="font-size:17px;margin-top:6px">The data is the asset. The workflow is missing.</div><div class="small muted" style="margin-top:6px">Validated practice data from ~2,500 organisations is unique. What's missing is the layer that turns it into decisions, execution and proof all year round.</div></div>
-        <div><div class="tiny muted">THE PRODUCT</div><div class="b" style="font-size:17px;margin-top:6px">An always-on HR Roadmap Copilot</div><div class="small muted" style="margin-top:6px">Diagnose → Plan → Execute → Prove → Next cycle, in one loop. AI does the analysis, and HR leaders make the decisions.</div></div>
+        <div><div class="tiny muted">THE PRODUCT</div><div class="b" style="font-size:17px;margin-top:6px">An always-on AI people strategy platform</div><div class="small muted" style="margin-top:6px">Diagnose → Plan → Execute → Prove → Next cycle, in one loop. AI does the analysis, and HR leaders make the decisions.</div></div>
       </div></div></div>
     <div class="grid g12 mt">
       <div class="card s6"><div class="card-h"><h3>Users & jobs to be done</h3></div><div class="card-b"><table class="tbl"><tbody>
         ${[['Chief People Officer', 'Set priorities, win board support, prove ROI'], ['Country HR leads', 'Know local gaps, execute, report progress'], ['HR business partners', 'Bring data-backed advice to business leaders'], ['Northstar advisors', 'Spot clients who need help, prepare in minutes'], ['Northstar account managers', 'Predict churn, find expansion']].map(r => `<tr><td class="b small" style="padding-left:0">${r[0]}</td><td class="small muted">${r[1]}</td></tr>`).join('')}</tbody></table></div></div>
       <div class="card s6"><div class="card-h"><h3>Success metrics</h3></div><div class="card-b"><div class="list">
-        ${[['North star', 'Monthly active client accounts outside assessment season', 'target 60%'], ['Retention', 'Gross revenue retention', '88% → 94%'], ['Expansion', 'Net revenue retention (scope upgrades, add-ons)', '→ 112%'], ['Client value', 'Avg. score uplift of copilot clients vs non-users', '+2.5 pts'], ['Efficiency', 'Survey completion time / audit hours per client', '−40% / −30%']].map(r => `<div class="row" style="padding:9px 0"><span class="chip info" style="width:86px;justify-content:center">${r[0]}</span><span class="small" style="flex:1">${r[1]}</span><b class="small">${r[2]}</b></div>`).join('')}
+        ${[['North star', 'Monthly active client accounts outside assessment season', 'target 60%'], ['Retention', 'Gross revenue retention', '88% → 94%'], ['Expansion', 'Net revenue retention (scope upgrades, add-ons)', '→ 112%'], ['Client value', 'Avg. score uplift of Pathfinder clients vs non-users', '+2.5 pts'], ['Efficiency', 'Survey completion time / audit hours per client', '−40% / −30%']].map(r => `<div class="row" style="padding:9px 0"><span class="chip info" style="width:86px;justify-content:center">${r[0]}</span><span class="small" style="flex:1">${r[1]}</span><b class="small">${r[2]}</b></div>`).join('')}
       </div></div></div>
     </div>
     <div class="grid g12 mt">
@@ -532,7 +532,7 @@
       </div></div></div>
     </div>
     <div class="card mt"><div class="card-h"><h3>Risks & how the design handles them</h3></div><div class="card-b"><div class="grid g4" style="gap:12px">
-      ${[['lock', 'Confidentiality', 'Peer data is only shown in groups of 10+ organisations and never identifies a company'], ['link', 'AI accuracy', 'Answers come only from client and benchmark data, cite survey items, and are approved by a human'], ['brief', 'Advisory cannibalisation', 'The copilot produces advisory leads instead of replacing advisors'], ['users', 'Adoption', 'Board reports and a pre-filled next assessment give HR teams a reason to log in every week']].map(x => `<div class="empty-reason"><div class="li-ico warn" style="margin-bottom:8px">${IC(x[0], 16)}</div><b class="small">${x[1]}</b><div class="tiny muted" style="margin-top:3px">${x[2]}</div></div>`).join('')}
+      ${[['lock', 'Confidentiality', 'Peer data is only shown in groups of 10+ organisations and never identifies a company'], ['link', 'AI accuracy', 'Answers come only from client and benchmark data, cite survey items, and are approved by a human'], ['brief', 'Advisory cannibalisation', 'Pathfinder produces advisory leads instead of replacing advisors'], ['users', 'Adoption', 'Board reports and a pre-filled next assessment give HR teams a reason to log in every week']].map(x => `<div class="empty-reason"><div class="li-ico warn" style="margin-bottom:8px">${IC(x[0], 16)}</div><b class="small">${x[1]}</b><div class="tiny muted" style="margin-top:3px">${x[2]}</div></div>`).join('')}
     </div></div></div>`;
 
   V.actions.clearChat = () => { S.chat = []; COP.mount(); };

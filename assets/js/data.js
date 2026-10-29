@@ -1,7 +1,7 @@
 /* Pathfinder demo data. Everything here is fictional. */
 window.D = (function () {
   const institute = { name: 'Northstar Workplace Institute', short: 'Northstar' };
-  const product = { name: 'Pathfinder', tagline: 'HR Roadmap Copilot' };
+  const product = { name: 'Pathfinder', tagline: 'AI People Strategy Platform' };
 
   const client = {
     name: 'Helix Biosciences',
@@ -65,7 +65,7 @@ window.D = (function () {
   domains.forEach(d => { d.s = avg(d.topics, 's'); d.p = avg(d.topics, 'p'); d.m = avg(d.topics, 'm'); d.t = avg(d.topics, 't'); });
   const overall = { s: avg(topics, 's'), p: avg(topics, 'p'), m: avg(topics, 'm'), t: avg(topics, 't'), threshold: 70 };
 
-  // Evidence the scores are grounded in (cited by the copilot)
+  // Evidence the scores are grounded in (cited by Ask Pathfinder)
   const surveyItems = {
     'ON-03': 'Structured 90-day onboarding plan applied in all countries',
     'ON-05': 'Documented onboarding policy reviewed in the last 24 months',

@@ -77,7 +77,7 @@
   const NAV = {
     chro: [
       { items: [{ r: 'overview', l: 'Overview', i: 'home' }] },
-      { g: 'Diagnose', items: [{ r: 'results', l: 'Results & Benchmarks', i: 'chart' }, { r: 'copilot', l: 'Ask Pathfinder', i: 'sparkles', b: 'AI', bc: 'ai' }] },
+      { g: 'Diagnose', items: [{ r: 'results', l: 'Results & Benchmarks', i: 'chart' }, { r: 'ask', l: 'Ask Pathfinder', i: 'sparkles', b: 'AI', bc: 'ai' }] },
       { g: 'Plan', items: [{ r: 'roadmap', l: 'Roadmap', i: 'map' }, { r: 'practices', l: 'Peer Practices', i: 'book' }] },
       { g: 'Execute', items: [{ r: 'initiatives', l: 'Initiatives', i: 'tasks', b: '1', bc: 'hot' }, { r: 'countries', l: 'Countries', i: 'globe', b: '!', bc: 'hot' }] },
       { g: 'Prove', items: [{ r: 'outcomes', l: 'Outcomes', i: 'trend' }, { r: 'report', l: 'Board Report', i: 'present' }] },
@@ -90,7 +90,7 @@
       { g: 'About', items: [{ r: 'vision', l: 'Product vision', i: 'layers' }] },
     ],
   };
-  const TITLES = { overview: 'Overview', results: 'Results & Benchmarks', copilot: 'Ask Pathfinder', roadmap: 'Roadmap', practices: 'Peer Practices', initiatives: 'Initiatives', countries: 'Countries', outcomes: 'Outcomes', report: 'Board Report', readiness: 'Next Assessment Readiness', advisor: 'Client Portfolio', vision: 'Product vision' };
+  const TITLES = { overview: 'Overview', results: 'Results & Benchmarks', ask: 'Ask Pathfinder', roadmap: 'Roadmap', practices: 'Peer Practices', initiatives: 'Initiatives', countries: 'Countries', outcomes: 'Outcomes', report: 'Board Report', readiness: 'Next Assessment Readiness', advisor: 'Client Portfolio', vision: 'Product vision' };
 
   function shell() {
     const isAdv = S.role === 'advisor';
@@ -106,7 +106,7 @@
       <div class="main">
         <header class="topbar">
           <div class="crumbs"><span>${isAdv ? 'Northstar' : D.client.name}</span>${IC('chev', 14)}<b id="crumb"></b></div>
-          <div class="search" data-go="copilot" data-focus="1">${IC('search', 16)}<span>Ask Pathfinder anything…</span><span class="kbd">/</span></div>
+          <div class="search" data-go="ask" data-focus="1">${IC('search', 16)}<span>Ask Pathfinder anything…</span><span class="kbd">/</span></div>
           <div class="tb-right">
             <div class="date-chip">${IC('clock', 14)} Demo date · ${D.client.today}</div>
             <button class="btn sec sm" data-action="tour">${IC('play', 14)} Guided demo</button>
@@ -117,7 +117,7 @@
         </header>
         <main id="view"></main>
       </div>
-      <button class="fab pulse" id="fab" data-go="copilot">${IC('sparkles', 18)} Ask Pathfinder</button>`;
+      <button class="fab pulse" id="fab" data-go="ask">${IC('sparkles', 18)} Ask Pathfinder</button>`;
   }
 
   function nav(route) {
@@ -128,7 +128,7 @@
   }
 
   /* ---------- router ---------- */
-  H.route = () => (location.hash.replace('#/', '') || 'overview').split('?')[0];
+  H.route = () => { const r = (location.hash.replace('#/', '') || 'overview').split('?')[0]; return r === 'copilot' ? 'ask' : r; }; // old #/copilot links still work
   H.go = r => { if (H.route() === r) render(); else location.hash = '#/' + r; };
   function render() {
     const r = H.route();
@@ -138,7 +138,7 @@
     H.$('#crumb').textContent = TITLES[r] || 'Overview';
     const out = fn();
     H.$('#view').innerHTML = `<div class="page">${out}</div>`;
-    H.$('#fab').style.display = (r === 'copilot' || r === 'advisor' || r === 'vision') ? 'none' : '';
+    H.$('#fab').style.display = (r === 'ask' || r === 'advisor' || r === 'vision') ? 'none' : '';
     if (V['after_' + r]) V['after_' + r]();
     window.scrollTo(0, 0);
   }
@@ -171,7 +171,7 @@
     if (!el) { if (!e.target.closest('#notif')) { const n = H.$('#notif'); if (n) n.innerHTML = ''; } return; }
     if (el.dataset.role) return setRole(el.dataset.role);
     if (el.dataset.openInit) return window.V.openInit(el.dataset.openInit);
-    if (el.dataset.ask) { const q = el.dataset.ask; if (H.route() !== 'copilot') { location.hash = '#/copilot'; setTimeout(() => COP.ask(q), 300); } else COP.ask(q); return; }
+    if (el.dataset.ask) { const q = el.dataset.ask; if (H.route() !== 'ask') { location.hash = '#/ask'; setTimeout(() => COP.ask(q), 300); } else COP.ask(q); return; }
     if (el.dataset.go) {
       const n = H.$('#notif'); if (n) n.innerHTML = '';
       H.closeAll();
@@ -189,7 +189,7 @@
   H.$('#scrim') && H.$('#scrim').addEventListener('click', H.closeAll);
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') { H.closeAll(); if (window.TOUR) TOUR.end(); }
-    if (e.key === '/' && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) { e.preventDefault(); H.go('copilot'); setTimeout(() => { const t = H.$('#chat-in'); t && t.focus(); }, 350); }
+    if (e.key === '/' && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) { e.preventDefault(); H.go('ask'); setTimeout(() => { const t = H.$('#chat-in'); t && t.focus(); }, 350); }
   });
   window.addEventListener('hashchange', render);
 
@@ -222,7 +222,7 @@
     shell();
     if (!location.hash) location.hash = '#/overview';
     render();
-    // deep links: ?tour=1 starts the guided demo, ?shot=1 skips the welcome, #/copilot?ask=... runs a question
+    // deep links: ?tour=1 starts the guided demo, ?shot=1 skips the welcome, #/ask?ask=... runs a question
     if (qs.get('tour')) { sessionStorage.setItem('pf-welcomed', '1'); setTimeout(() => TOUR.start(), 400); }
     else if (!qs.get('shot') && !sessionStorage.getItem('pf-welcomed')) { sessionStorage.setItem('pf-welcomed', '1'); welcome(); }
     if (qs.get('report') && H.route() === 'report') { S.reportReady = true; render(); }
