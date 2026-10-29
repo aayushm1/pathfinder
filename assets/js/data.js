@@ -10,7 +10,7 @@ window.D = (function () {
     hq: 'Basel, Switzerland',
     employees: 8400,
     countries: 12,
-    seal: 'Regional Seal · Europe',
+    seal: 'Regional scope · Europe',
     certYear: 2027,
     user: { name: 'Maria Lindqvist', role: 'Chief People Officer', initials: 'ML' },
     today: '15 Jul 2027',
@@ -198,7 +198,7 @@ window.D = (function () {
 
   const advisorClients = [
     { name: 'Helix Biosciences', ind: 'Pharma', seal: 'Regional · Europe', arr: 68, health: 84, trend: [62, 66, 70, 74, 79, 84], wau: 37, stage: 'Execute', renewal: 'Mar 2028',
-      signal: { type: 'upsell', text: 'Wellbeing initiative at risk for 6 weeks. Offer the Wellbeing Deep-Dive (Advisory).' }, upsell: 'Global Seal: US, IN, BR, JP and SG are all above threshold' },
+      signal: { type: 'upsell', text: 'Wellbeing initiative at risk for 6 weeks. Offer the Wellbeing Deep-Dive (Advisory).' }, upsell: 'Global scope: US, IN, BR, JP and SG are all above threshold' },
     { name: 'Kestrel Bank', ind: 'Financial Services', seal: 'Country · UK', arr: 32, health: 41, trend: [78, 74, 66, 58, 49, 41], wau: 4, stage: 'Fix', renewal: 'Nov 2027',
       signal: { type: 'risk', text: 'Weekly users dropped 80% after the CPO left in April. Re-onboard the new CPO before renewal.' }, upsell: null },
     { name: 'Corvane Pharma', ind: 'Pharma', seal: 'Global', arr: 112, health: 91, trend: [80, 83, 85, 88, 90, 91], wau: 64, stage: 'Lead', renewal: 'Jan 2028',
@@ -206,7 +206,7 @@ window.D = (function () {
     { name: 'Aurelis Foods', ind: 'FMCG', seal: 'Regional · Europe', arr: 74, health: 77, trend: [70, 72, 71, 74, 76, 77], wau: 29, stage: 'Prove', renewal: 'Apr 2028',
       signal: { type: 'upsell', text: 'They export ESG data to spreadsheets every quarter. Pitch the CSRD S1 reporting module.' }, upsell: 'CSRD S1 module' },
     { name: 'Tidewell Energy', ind: 'Energy', seal: 'Country · NL', arr: 28, health: 69, trend: [60, 63, 65, 66, 68, 69], wau: 12, stage: 'Execute', renewal: 'Feb 2028',
-      signal: { type: 'upsell', text: '3 more countries are above threshold. Expand to a Regional Seal.' }, upsell: 'Regional Seal' },
+      signal: { type: 'upsell', text: '3 more countries are above threshold. Expand to regional scope.' }, upsell: 'Regional scope' },
     { name: 'Sentra Telecom', ind: 'Telecom', seal: 'Regional · S. Europe', arr: 61, health: 58, trend: [72, 70, 66, 63, 60, 58], wau: 9, stage: 'Maintain', renewal: 'Dec 2027',
       signal: { type: 'risk', text: 'They haven\'t updated their roadmap in 90 days. Book a re-planning session.' }, upsell: null },
     { name: 'Brightfield Retail', ind: 'Retail', seal: 'Country · DE', arr: 24, health: 73, trend: [55, 60, 64, 68, 71, 73], wau: 15, stage: 'Fix', renewal: 'May 2028',

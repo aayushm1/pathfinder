@@ -24,7 +24,7 @@
       think: ['Reading 20 topic scores from your 2027 results', 'Comparing with 46 peers · Pharma & Life Sciences · Europe', 'Ranking gaps by size and business impact'],
       text: `<p>Against your <b>46 pharma peers</b>, your three biggest gaps are <b>Onboarding (−16)</b>, <b>Leadership (−14)</b> and <b>Wellbeing (−11)</b>, with Succession close behind.</p><p>They're connected. Weak first-line leadership shows up in onboarding experience, wellbeing and succession readiness. That's why your roadmap puts the <b>Manager Excellence Programme</b> at the centre.</p>`,
       blocks: [{ type: 'bars', rows: g }],
-      cites: ['Certification 2027 · validated scores', 'Peer benchmark · n=46', 'LD-02', 'ON-03', 'WB-04'],
+      cites: ['Assessment 2027 · validated scores', 'Peer benchmark · n=46', 'LD-02', 'ON-03', 'WB-04'],
       actions: [{ l: 'Open roadmap', a: 'data-go="roadmap"', pri: 1 }, { l: 'See all topics', a: 'data-go="results"' }],
       fu: ['Why did our Onboarding score drop?', 'What do top performers do on Wellbeing?', 'What if we deliver the whole roadmap?'],
     };
@@ -39,7 +39,7 @@
     blocks: [{ type: 'table', head: ['Survey item', '2026', '2027', 'Now'], rows: [['ON-03 · 90-day plan in all countries', 'Partial', 'Partial', '<span class="chip ok">10/12 countries</span>'], ['ON-05 · Policy reviewed < 24 months', 'Met', '<span style="color:var(--rose)">Not evidenced</span>', '<span class="chip ok">Fixed · May</span>'], ['ON-07 · Digital pre-boarding (new)', '—', '<span style="color:var(--rose)">Not met</span>', '<span class="chip ok">Live</span>'], ['ON-09 · Buddy for every new hire', 'Partial', 'Partial', '<span class="chip warn">ES, BR, IN pending</span>']] }],
     cites: ['ON-03', 'ON-05', 'ON-07', 'ON-09', 'Auditor notes · 2027', 'Country scores'],
     actions: [{ l: 'Open onboarding initiative', a: 'data-open-init="I2"', pri: 1 }, { l: 'See Corvane Pharma\'s practice', a: 'data-go="practices"' }],
-    fu: ['Which country is lagging and why?', 'Is the roadmap actually working?', 'How ready are we for recertification?'],
+    fu: ['Which country is lagging and why?', 'Is the roadmap actually working?', 'How ready are we for the next assessment?'],
   });
   R.leadership = () => {
     const t = H.T('LD');
@@ -57,7 +57,7 @@
     if (derisk) return {
       think: ['Reading initiative status, budget log and blockers', 'Checking how peers sequenced similar rollouts', 'Estimating score impact of options'],
       text: `<p>The Wellbeing initiative is <b>6 weeks behind</b> because local budgets are pending in <b>France, Italy and Brazil</b> (€85k total). Three options, ranked:</p>
-        <p><b>1. Fund it centrally (recommended).</b> Ask the CFO to approve €85k from the global HR budget. This protects the projected <b>+10</b> on Wellbeing and keeps the Global Seal on track.</p>
+        <p><b>1. Fund it centrally (recommended).</b> Ask the CFO to approve €85k from the global HR budget. This protects the projected <b>+10</b> on Wellbeing and keeps the global rollout target on track.</p>
         <p><b>2. Phase it.</b> Launch the low-cost parts now (mental-health first aiders, menopause policy) and move the EAP to Q4. This keeps about +6 of the uplift.</p>
         <p><b>3. Re-scope.</b> Cover only the 7 live countries. WB-04 would stay "partial" and Wellbeing would land at about 68.</p>`,
       blocks: [{ type: 'table', head: ['Option', 'Cost', 'Wellbeing next cycle', 'Risk'], rows: [['Fund centrally', '€85k', '<b>74</b>', '<span class="chip ok">Low</span>'], ['Phase it', '€30k now', '70', '<span class="chip warn">Medium</span>'], ['Re-scope', '€0', '68', '<span class="chip risk">High</span>']] }],
@@ -89,13 +89,13 @@
     return {
       think: ['Pulling results, roadmap and outcome data', 'Prioritising what a CEO needs to know', 'Writing a concise summary'],
       text: `<p><b>Summary for the CEO</b></p>
-        <p>• <b>Certified again</b> at ${o.s}, above the peer median (${o.m}) but ${H.fmt1(o.t - o.s)} below the top quartile. We slipped ${H.fmt1(o.p - o.s)} because the standard got tougher on onboarding.<br>
+        <p>• <b>Above the peer median</b> at ${o.s}, above the peer median (${o.m}) but ${H.fmt1(o.t - o.s)} below the top quartile. We slipped ${H.fmt1(o.p - o.s)} because the standard got tougher on onboarding.<br>
         • <b>Strengths</b> that support our talent brand: Employer Branding (91, top quartile), Learning (88), Purpose (87).<br>
         • <b>The plan</b>: 6 initiatives (€1.25M) target Onboarding, Leadership, Wellbeing and Succession. We are ${H.avgProgress()}% through and projected to reach <b>${p}</b>.<br>
         • <b>Early proof</b>: new-hire attrition is down 46% in pilot countries, eNPS is up 9, worth about <b>€2.3M a year</b>.<br>
-        • <b>Decisions needed</b>: €85k Wellbeing budget, a sponsor for the Iberia Bio integration, and a Global Seal application in 2028.</p>`,
+        • <b>Decisions needed</b>: €85k Wellbeing budget, a sponsor for the Iberia Bio integration, and global scope for the 2028 assessment.</p>`,
       blocks: [],
-      cites: ['Certification 2027', 'Roadmap', 'Workday', 'Glint'],
+      cites: ['Assessment 2027', 'Roadmap', 'Workday', 'Glint'],
       actions: [{ l: 'Turn into board slides', a: 'data-go="report"', pri: 1 }, { l: 'Copy summary', a: 'data-action="copySum"' }],
       fu: ['Is the roadmap actually working?', 'What if we deliver the whole roadmap?'],
     };
@@ -106,7 +106,7 @@
     blocks: [{ type: 'kpis', items: [{ l: 'New-hire attrition · pilot', v: '5.4%', d: '−46%' }, { l: 'Voluntary attrition', v: '11.2%', d: '−2.2 pts' }, { l: 'eNPS', v: '+27', d: '+9' }, { l: 'Annual value', v: '€2.3M', d: 'est.' }] }],
     cites: ['Workday · synced today', 'Glint · Q2 2027', 'Pilot vs control method'],
     actions: [{ l: 'Open outcomes', a: 'data-go="outcomes"', pri: 1 }, { l: 'Add to board report', a: 'data-go="report"' }],
-    fu: ['Summarise our position for my CEO', 'How ready are we for recertification?'],
+    fu: ['Summarise our position for my CEO', 'How ready are we for the next assessment?'],
   });
   R.recert = () => ({
     think: ['Mapping tracked evidence to 214 next-cycle survey items', 'Checking which answers changed since 2027', 'Estimating effort left'],
@@ -120,7 +120,7 @@
     const rows = S.inits.map(i => [i.name, `+${i.uplift} ${H.T(i.topic).name}`, `${i.progress}%`, H.status(i.status)]);
     return {
       think: ['Loading projected uplift for each initiative', 'Applying spillover effects between topics', 'Re-scoring all 20 topics'],
-      text: `<p>If every initiative lands, your overall score is projected to rise from <b>${D.overall.s} to ${H.projected()}</b>. That moves Helix from the 56th to roughly the <b>70th percentile</b> of pharma peers and makes a <b>Global Seal</b> realistic in 2028.</p><p>The biggest contributors are Onboarding (+14) and Manager Excellence (+9, plus spillover into Performance, Engagement and Succession). Wellbeing is the swing factor: if it stays blocked, the projection drops by about 0.5.</p>`,
+      text: `<p>If every initiative lands, your overall score is projected to rise from <b>${D.overall.s} to ${H.projected()}</b>. That moves Helix from the 56th to roughly the <b>70th percentile</b> of pharma peers and makes <b>global scope</b> realistic in 2028.</p><p>The biggest contributors are Onboarding (+14) and Manager Excellence (+9, plus spillover into Performance, Engagement and Succession). Wellbeing is the swing factor: if it stays blocked, the projection drops by about 0.5.</p>`,
       blocks: [{ type: 'table', head: ['Initiative', 'Projected uplift', 'Progress', 'Status'], rows }],
       cites: ['Roadmap model', 'Peer uplift history · 1,240 initiatives'],
       actions: [{ l: 'Open roadmap', a: 'data-go="roadmap"', pri: 1 }],
@@ -155,7 +155,7 @@
   };
   R.fallback = () => ({
     think: ['Searching your results, roadmap and evidence'],
-    text: `<p>In this demo I can answer questions about your <b>scores and gaps</b>, <b>root causes</b>, <b>countries</b>, <b>peer practices</b>, <b>roadmap projections</b>, <b>outcomes</b> and <b>recertification readiness</b>. I can also write summaries for your CEO or board.</p><p>Try one of these:</p>`,
+    text: `<p>In this demo I can answer questions about your <b>scores and gaps</b>, <b>root causes</b>, <b>countries</b>, <b>peer practices</b>, <b>roadmap projections</b>, <b>outcomes</b> and <b>next-cycle readiness</b>. I can also write summaries for your CEO or board.</p><p>Try one of these:</p>`,
     blocks: [], cites: [], actions: [],
     fu: STARTERS.map(s => s[1]).slice(0, 4),
   });

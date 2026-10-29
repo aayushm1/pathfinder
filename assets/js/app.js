@@ -47,7 +47,7 @@
     core: { label: D.client.peerGroup, n: D.client.peerCount, off: 0 },
     eu: { label: 'All industries · Europe', n: 612, off: -3 },
     pharma: { label: 'Pharma & Life Sciences · Global', n: 138, off: 1 },
-    top: { label: 'Top 10% of all certified employers', n: 248, off: 7 },
+    top: { label: 'Top 10% of all assessed employers', n: 248, off: 7 },
   };
   H.peer = t => { const o = H.peerSets[S.peerSet].off; return { m: Math.round(t.m + o), t: Math.min(99, Math.round(t.t + o * 0.6)) }; };
 
@@ -81,7 +81,7 @@
       { g: 'Plan', items: [{ r: 'roadmap', l: 'Roadmap', i: 'map' }, { r: 'practices', l: 'Peer Practices', i: 'book' }] },
       { g: 'Execute', items: [{ r: 'initiatives', l: 'Initiatives', i: 'tasks', b: '1', bc: 'hot' }, { r: 'countries', l: 'Countries', i: 'globe', b: '!', bc: 'hot' }] },
       { g: 'Prove', items: [{ r: 'outcomes', l: 'Outcomes', i: 'trend' }, { r: 'report', l: 'Board Report', i: 'present' }] },
-      { g: 'Recertify', items: [{ r: 'readiness', l: 'Readiness', i: 'shield', b: '64%' }] },
+      { g: 'Next cycle', items: [{ r: 'readiness', l: 'Readiness', i: 'shield', b: '64%' }] },
       { g: 'About', items: [{ r: 'vision', l: 'Product vision', i: 'layers' }] },
     ],
     advisor: [
@@ -90,7 +90,7 @@
       { g: 'About', items: [{ r: 'vision', l: 'Product vision', i: 'layers' }] },
     ],
   };
-  const TITLES = { overview: 'Overview', results: 'Results & Benchmarks', copilot: 'Ask Pathfinder', roadmap: 'Roadmap', practices: 'Peer Practices', initiatives: 'Initiatives', countries: 'Countries', outcomes: 'Outcomes', report: 'Board Report', readiness: 'Certification Readiness', advisor: 'Client Portfolio', vision: 'Product vision' };
+  const TITLES = { overview: 'Overview', results: 'Results & Benchmarks', copilot: 'Ask Pathfinder', roadmap: 'Roadmap', practices: 'Peer Practices', initiatives: 'Initiatives', countries: 'Countries', outcomes: 'Outcomes', report: 'Board Report', readiness: 'Next Assessment Readiness', advisor: 'Client Portfolio', vision: 'Product vision' };
 
   function shell() {
     const isAdv = S.role === 'advisor';
@@ -160,7 +160,7 @@
       { c: 'warn', i: 'alert', t: '<b>Wellbeing Framework 2.0</b> is 6 weeks behind. Budget approval is pending in FR, IT and BR.', go: 'initiatives' },
       { c: 'risk', i: 'building', t: '<b>Iberia Bio</b> (700 people) is not covered by any initiative yet.', go: 'countries' },
       { c: 'ok', i: 'trend', t: 'Onboarding pilot: new-hire attrition in DE/CH is <b>down 46%</b>.', go: 'outcomes' },
-      { c: 'info', i: 'shield', t: 'The recertification survey opens in <b>78 days</b>. 64% of it is already pre-filled.', go: 'readiness' },
+      { c: 'info', i: 'shield', t: 'The next assessment survey opens in <b>78 days</b>. 64% of it is already pre-filled.', go: 'readiness' },
     ];
     n.innerHTML = `<div class="notif"><div class="row between" style="padding:8px 10px"><b>Pathfinder nudges</b><span class="chip info">4 new</span></div><div class="list">${items.map(x => `<div class="li" data-go="${x.go}"><div class="li-ico ${x.c}">${IC(x.i, 16)}</div><div class="small">${x.t}</div></div>`).join('')}</div></div>`;
   }
@@ -197,14 +197,14 @@
     const w = document.createElement('div'); w.className = 'welcome'; w.id = 'welcome';
     w.innerHTML = `<div class="welcome-card">
       <div class="welcome-top"><span class="chip" style="background:rgba(255,255,255,.14);color:#fff">${IC('sparkles', 13)} Concept prototype · fictional data</span>
-        <h2>Pathfinder: from a once-a-year certificate to an always-on HR strategy</h2>
-        <p>You are <b>${D.client.user.name}</b>, CPO of <b>${D.client.name}</b> (8,400 people, 12 countries). Your ${D.client.certYear} certification results are in. Pathfinder helps you understand them, plan, execute, prove impact and recertify, all in one place.</p></div>
+        <h2>Pathfinder: from a once-a-year report to an always-on HR strategy</h2>
+        <p>You are <b>${D.client.user.name}</b>, CPO of <b>${D.client.name}</b> (8,400 people, 12 countries). Your ${D.client.certYear} assessment results are in. Pathfinder helps you understand them, plan, execute, prove impact and prepare for the next assessment, all in one place.</p></div>
       <div class="welcome-b">
         <div class="wsteps">
           <div><span class="chip info">1 · Diagnose</span><b>Ask your results</b><span>AI answers that cite your survey items</span></div>
           <div><span class="chip teal">2 · Plan</span><b>AI roadmap</b><span>Ranked by impact and your priorities</span></div>
           <div><span class="chip warn">3 · Execute</span><b>Track it all year</b><span>Initiatives, countries, nudges</span></div>
-          <div><span class="chip ok">4 · Prove</span><b>Board-ready proof</b><span>Outcomes plus a pre-filled recertification</span></div>
+          <div><span class="chip ok">4 · Prove</span><b>Board-ready proof</b><span>Outcomes plus a pre-filled next assessment</span></div>
         </div>
         <div class="row mt" style="justify-content:flex-end;gap:10px">
           <button class="btn sec" id="w-skip">Explore on my own</button>

@@ -2,9 +2,9 @@
 
 # ✨ Pathfinder: HR Roadmap Copilot
 
-### Workplace certification gives a company a report card once a year. Pathfinder makes it useful all year round.
+### HR leaders get a people-practices report card once a year. Pathfinder makes it useful all year round.
 
-An AI copilot that turns annual HR certification results into a living people strategy. It explains the gaps, builds a prioritised roadmap, tracks execution across countries, proves the business impact in euros, and pre-fills next year's certification.
+An AI copilot that turns annual HR assessment and benchmark results into a living people strategy. It explains the gaps, builds a prioritised roadmap, tracks execution across countries, proves the business impact in euros, and pre-fills next year's assessment.
 
 <br>
 
@@ -12,7 +12,7 @@ An AI copilot that turns annual HR certification results into a living people st
 
 <br>
 
-![Domain](https://img.shields.io/badge/domain-HR%20Tech%20%C2%B7%20Workplace%20Certification-5B4BF5)
+![Domain](https://img.shields.io/badge/domain-HR%20Tech%20%C2%B7%20People%20Analytics-5B4BF5)
 ![Type](https://img.shields.io/badge/type-B2B%20SaaS%20%C2%B7%20AI%20copilot-0EA5A4)
 ![Role](https://img.shields.io/badge/role-Senior%20Product%20Management-F59E0B)
 ![Stack](https://img.shields.io/badge/stack-Vanilla%20JS%20%C2%B7%20zero%20dependencies-0B1129)
@@ -20,12 +20,12 @@ An AI copilot that turns annual HR certification results into a living people st
 
 <br>
 
-<a href="https://aayushm1.github.io/hr-roadmap-copilot/"><img src="docs/screenshots/overview.jpg" alt="Pathfinder overview dashboard: certification score vs peers, journey stage, KPIs and AI nudges" width="100%"></a>
+<a href="https://aayushm1.github.io/hr-roadmap-copilot/"><img src="docs/screenshots/overview.jpg" alt="Pathfinder overview dashboard: people score vs peers, journey stage, KPIs and AI nudges" width="100%"></a>
 
 </div>
 
 > [!NOTE]
-> This is an independent product concept, built as a senior-PM exercise for the employer-certification industry. **Northstar Workplace Institute** (the certifier), **Helix Biosciences** (the client) and every person, company and number in the prototype are fictional. It is not affiliated with or endorsed by any certification body.
+> This is an independent product concept, built as a senior-PM exercise in HR tech. **Northstar Workplace Institute** (an HR assessment and benchmarking provider), **Helix Biosciences** (the client) and every person, company and number in the prototype are fictional. It is not affiliated with or endorsed by any real company.
 
 ---
 
@@ -50,21 +50,21 @@ An AI copilot that turns annual HR certification results into a living people st
 
 | | |
 |---|---|
-| **Problem** | Certification runs as a yearly cycle: survey → audit → results PDF → nothing for 9 months. HR teams struggle to act on the insights, renewal gets harder to justify, and turning data into action needs a paid advisor for every engagement. |
-| **Insight** | The certifier owns a unique asset: validated HR-practice data from ~2,500 organisations. What's missing is the workflow that turns it into **decisions, execution and proof** all year round. |
-| **Solution** | One loop in one product: **Diagnose → Plan → Execute → Prove → Recertify**, with an AI analyst that only answers from validated data and always cites its sources. |
-| **Two-sided value** | The client improves faster and can prove it to their board. The certifier gets weekly usage, churn and expansion signals, and a dataset no competitor has. |
-| **North-star metric** | Monthly active client accounts **outside** certification season |
+| **Problem** | HR assessments run as a yearly cycle: survey → audit → results PDF → nothing for 9 months. HR teams struggle to act on the insights, renewal gets harder to justify, and turning data into action needs a paid advisor for every engagement. |
+| **Insight** | The assessment provider owns a unique asset: validated HR-practice data from ~2,500 organisations. What's missing is the workflow that turns it into **decisions, execution and proof** all year round. |
+| **Solution** | One loop in one product: **Diagnose → Plan → Execute → Prove → Next cycle**, with an AI analyst that only answers from validated data and always cites its sources. |
+| **Two-sided value** | The client improves faster and can prove it to their board. The provider gets weekly usage, churn and expansion signals, and a dataset no competitor has. |
+| **North-star metric** | Monthly active client accounts **outside** assessment season |
 | **Demo result** | Helix Biosciences, 6 months in: new-hire attrition **−46%** in pilot countries (**≈ €2.3M/yr**), projected score **76.6 → 79.7**, next year's survey **64% pre-filled** |
 
 ---
 
 ## 1. The problem
 
-Employer certification bodies assess a company's HR practices once a year and award a seal. The value chain today:
+HR assessment and benchmarking providers evaluate a company's people practices once a year and hand back a results report. The value chain today:
 
 ```
-Survey (weeks of HR effort) → Independent audit → Results report + Seal → … 9 months of silence … → Next survey
+Survey (weeks of HR effort) → Independent validation → Results report → … 9 months of silence … → Next survey
 ```
 
 | Who | Pain today |
@@ -72,9 +72,9 @@ Survey (weeks of HR effort) → Independent audit → Results report + Seal → 
 | **Chief People Officer** | Gets a long static report. Knows *where* they are behind peers, but not *why*, *what to do first*, or *how to prove* it worked. |
 | **Country HR leads** | No shared plan. Each country interprets the results differently, and progress is tracked in spreadsheets. |
 | **CFO** (the real renewal decision-maker) | Sees a yearly fee and a badge, but no measurable business outcome. |
-| **The certifier** | Value shows up once a year, so renewals are at risk. Advisory scales only with headcount. It's blind to which clients are struggling until renewal. |
+| **The assessment provider** | Value shows up once a year, so renewals are at risk. Advisory scales only with headcount. It's blind to which clients are struggling until renewal. |
 
-**The core insight:** the certifier already holds the most valuable dataset in the industry (validated practices plus peer benchmarks). The product gap is everything that happens *after* the results arrive.
+**The core insight:** the provider already holds the most valuable dataset in the industry (validated practices plus peer benchmarks). The product gap is everything that happens *after* the results arrive.
 
 ## 2. Users and jobs to be done
 
@@ -83,8 +83,8 @@ Survey (weeks of HR effort) → Independent audit → Results report + Seal → 
 | **Chief People Officer** *(primary)* | "Help me set the right priorities, win board support and prove ROI." |
 | **Country HR leads** | "Tell me my local gaps, what to do and how I'm tracking against the plan." |
 | **HR business partners** | "Give me data-backed talking points for my business leaders." |
-| **Certifier advisors** | "Show me which clients need help and prepare me in minutes, not hours." |
-| **Certifier account managers** | "Warn me about churn early and show me where to expand." |
+| **Provider advisors** | "Show me which clients need help and prepare me in minutes, not hours." |
+| **Provider account managers** | "Warn me about churn early and show me where to expand." |
 
 ## 3. The solution: one continuous loop
 
@@ -93,16 +93,16 @@ flowchart LR
     A["📊 Diagnose<br/>Results & benchmarks<br/>Ask Pathfinder (AI)"] --> B["🗺️ Plan<br/>AI roadmap<br/>Peer practices"]
     B --> C["⚙️ Execute<br/>Initiatives<br/>Countries · nudges"]
     C --> D["📈 Prove<br/>Outcomes in €<br/>Board report"]
-    D --> E["🛡️ Recertify<br/>Survey pre-filled<br/>from evidence"]
+    D --> E["🛡️ Next cycle<br/>Survey pre-filled<br/>from evidence"]
     E --> A
-    C -. "usage signals" .-> F["🧭 Certifier advisor console<br/>health · churn · expansion"]
+    C -. "usage signals" .-> F["🧭 Provider advisor console<br/>health · churn · expansion"]
 ```
 
 As the company matures, the same product moves with it: **Fix** (close gaps) → **Maintain** (hold standards through change) → **Prove** (show business impact) → **Lead** (be recognised as top performers). That's why clients don't "graduate" out of it.
 
 ## 4. Product tour
 
-> The story: **Maria Lindqvist**, CPO of **Helix Biosciences** (8,400 people, 12 countries, pharma), is six months into her 2027 roadmap. Certified at **76.6**: above the peer median of 75.5, below the top quartile of 85.1.
+> The story: **Maria Lindqvist**, CPO of **Helix Biosciences** (8,400 people, 12 countries, pharma), is six months into her 2027 roadmap. Helix scores **76.6**: above the peer median of 75.5, below the top quartile of 85.1.
 
 <table>
 <tr>
@@ -123,19 +123,19 @@ As the company matures, the same product moves with it: **Fix** (close gaps) →
 </tr>
 <tr>
 <td><a href="https://aayushm1.github.io/hr-roadmap-copilot/?report=1#/report"><img src="docs/screenshots/report.jpg" alt="One-click board report"></a></td>
-<td><a href="https://aayushm1.github.io/hr-roadmap-copilot/#/readiness"><img src="docs/screenshots/readiness.jpg" alt="Recertification readiness"></a></td>
+<td><a href="https://aayushm1.github.io/hr-roadmap-copilot/#/readiness"><img src="docs/screenshots/readiness.jpg" alt="Next assessment readiness"></a></td>
 </tr>
 <tr>
 <td><b>Board report.</b> Builds 5 board slides from live data in about 10 seconds: where we stand, what we're doing, early proof, and the decisions we need. Exports to PDF.</td>
-<td><b>Recertification readiness.</b> 137 of 214 survey items are already pre-filled from evidence gathered during the year. Drop in a document and the AI maps it to survey items with a confidence score.</td>
+<td><b>Next assessment readiness.</b> 137 of 214 survey items are already pre-filled from evidence gathered during the year. Drop in a document and the AI maps it to survey items with a confidence score.</td>
 </tr>
 <tr>
 <td><a href="https://aayushm1.github.io/hr-roadmap-copilot/#/results"><img src="docs/screenshots/results.jpg" alt="Results and benchmarks"></a></td>
-<td><a href="https://aayushm1.github.io/hr-roadmap-copilot/#/advisor"><img src="docs/screenshots/advisor.jpg" alt="Certifier advisor console"></a></td>
+<td><a href="https://aayushm1.github.io/hr-roadmap-copilot/#/advisor"><img src="docs/screenshots/advisor.jpg" alt="Provider advisor console"></a></td>
 </tr>
 <tr>
 <td><b>Results & benchmarks.</b> 6 domains and 20 topics vs a switchable peer group (4 benchmark sets), with gap and strength filters.</td>
-<td><b>Advisor console (certifier side).</b> Client health from real usage, churn signals, expansion plays, and an auto-generated account brief.</td>
+<td><b>Advisor console (provider side).</b> Client health from real usage, churn signals, expansion plays, and an auto-generated account brief.</td>
 </tr>
 </table>
 
@@ -147,29 +147,29 @@ As the company matures, the same product moves with it: **Fix** (close gaps) →
 |---|---|
 | **Grounded, cited AI, never free-form** | In a business that sells credibility, a confident wrong answer costs more than a missing one. Answers come only from validated results, the evidence vault and aggregated benchmarks, and every claim cites the survey item behind it. |
 | **Recommend, don't automate** | Pathfinder suggests, ranks and drafts. HR approves. Accountability stays with the client, and advisors stay in the loop. |
-| **Recertification is built into the workflow** | Evidence captured while executing initiatives flows straight into next year's survey. This creates the habit loop: users have a reason to log in every month, not once a year. |
+| **The next assessment is built into the workflow** | Evidence captured while executing initiatives flows straight into next year's survey. This creates the habit loop: users have a reason to log in every month, not once a year. |
 | **Prove it in euros, with the method shown** | The CFO decides renewals. Outcomes compare pilot and non-pilot countries, show the calculation, and label it as correlation. |
 | **Advisory gets leads, not competition** | Stuck initiatives and repeated questions become qualified advisory leads, so the copilot grows the services business instead of eating it. |
 | **Privacy by design** | Peer data is only shown for groups of 10+ organisations. Employee data is only shown as aggregates of 20+ people. No company can be identified. |
-| **One product, two personas** | The same data powers the client workspace and the certifier's advisor console. Value to the client becomes visible to the business. |
+| **One product, two personas** | The same data powers the client workspace and the provider's advisor console. Value to the client becomes visible to the business. |
 
 ## 6. Business model
 
 | Tier | For | Includes |
 |---|---|---|
-| **Certify** | Today's programme | Survey and validation, seal and brand kit, results report |
-| **Certify + Pathfinder** ⭐ | Most clients | Ask your results (AI), AI roadmap and tracker, board reports, pre-filled recertification |
+| **Assess** | Today's programme | Survey and validation, employer-brand kit, results report |
+| **Assess + Pathfinder** ⭐ | Most clients | Ask your results (AI), AI roadmap and tracker, board reports, pre-filled next assessment |
 | **Enterprise** | Global groups | Multi-country workspace, HR-system and engagement integrations, outcome analytics, advisory hours |
 
-**New revenue it unlocks:** a premium tier, advisory leads, seal upgrades (country → regional → global), outcome-analytics and ESG/CSRD reporting add-ons, and in the long run benchmark data products built on *which interventions actually work*.
+**New revenue it unlocks:** a premium tier, advisory leads, scope upgrades (country → regional → global), outcome-analytics and ESG/CSRD reporting add-ons, and in the long run benchmark data products built on *which interventions actually work*.
 
 ## 7. Success metrics
 
 | Type | Metric | Target |
 |---|---|---|
-| ⭐ **North star** | Monthly active client accounts outside certification season | 60% |
+| ⭐ **North star** | Monthly active client accounts outside assessment season | 60% |
 | Retention | Gross revenue retention | 88% → 94% |
-| Expansion | Net revenue retention (seal upgrades, add-ons) | → 112% |
+| Expansion | Net revenue retention (scope upgrades, add-ons) | → 112% |
 | Client value | Avg. score uplift, copilot users vs non-users | +2.5 pts |
 | Efficiency | Survey completion time / audit hours per client | −40% / −30% |
 | Guardrail | Share of AI answers with valid citations | 100% |
@@ -179,7 +179,7 @@ As the company matures, the same product moves with it: **Fix** (close gaps) →
 
 | Phase | Scope | Timing | Exit criteria |
 |---|---|---|---|
-| **1 · MVP** | Ask your results + roadmap generator on existing certification data | 1 quarter | 40% of pilot clients active monthly outside the season |
+| **1 · MVP** | Ask your results + roadmap generator on existing assessment data | 1 quarter | 40% of pilot clients active monthly outside the season |
 | **2 · Execute & prove** | Initiative tracker, countries, board reports, pre-filled survey | +2 quarters | Survey completion time −30% for users |
 | **3 · Platform** | HR-system integrations, outcome analytics, advisor console, partner marketplace | +2 quarters | Measurable renewal-rate lift vs control |
 
@@ -202,7 +202,7 @@ As the company matures, the same product moves with it: **Fix** (close gaps) →
 | Drag **Cost discipline** to 100 and watch quick wins move up | [Roadmap](https://aayushm1.github.io/hr-roadmap-copilot/#/roadmap) |
 | Click **Create 100-day integration initiative**, then check the new projected score | [Countries](https://aayushm1.github.io/hr-roadmap-copilot/#/countries) |
 | Open **Wellbeing Framework 2.0** → **Draft escalation to CFO** | [Initiatives](https://aayushm1.github.io/hr-roadmap-copilot/#/initiatives) |
-| Switch to the certifier's side | [Advisor view](https://aayushm1.github.io/hr-roadmap-copilot/#/advisor) |
+| Switch to the provider's side | [Advisor view](https://aayushm1.github.io/hr-roadmap-copilot/#/advisor) |
 
 Other questions to ask the AI: *"Summarise our position for my CEO"* · *"Which country is lagging and why?"* · *"How can we de-risk the wellbeing initiative?"* · *"Is the roadmap actually working?"* · *"What if we deliver the whole roadmap?"*
 
@@ -252,6 +252,6 @@ Or just open `index.html` in a browser.
 <div align="center">
 
 Built by **[Aayush Mehan](https://aayushm1.github.io/)**: product thinking, PRD, design and prototype.
-<br><sub>Concept prototype · fictional data · not affiliated with any certification body</sub>
+<br><sub>Concept prototype · fictional data · not affiliated with any real company</sub>
 
 </div>
