@@ -217,9 +217,15 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
+    const qs = new URLSearchParams(location.search);
+    if (H.route() === 'advisor') S.role = 'advisor';
     shell();
     if (!location.hash) location.hash = '#/overview';
     render();
-    if (!sessionStorage.getItem('pf-welcomed')) { sessionStorage.setItem('pf-welcomed', '1'); welcome(); }
+    // deep links: ?tour=1 starts the guided demo, ?shot=1 skips the welcome, #/copilot?ask=... runs a question
+    if (qs.get('tour')) { sessionStorage.setItem('pf-welcomed', '1'); setTimeout(() => TOUR.start(), 400); }
+    else if (!qs.get('shot') && !sessionStorage.getItem('pf-welcomed')) { sessionStorage.setItem('pf-welcomed', '1'); welcome(); }
+    if (qs.get('report') && H.route() === 'report') { S.reportReady = true; render(); }
+    if (qs.get('shot')) document.body.classList.add('shot');
   });
 })();

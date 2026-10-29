@@ -211,6 +211,8 @@
     const go = () => { const v = inp.value.trim(); if (!v) return; inp.value = ''; ask(v); };
     send.onclick = go;
     inp.onkeydown = e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); go(); } };
+    const dl = new URLSearchParams(location.search).get('ask');
+    if (dl && !S.chat.length && !mount.done) { mount.done = true; setTimeout(() => ask(dl), 300); }
   }
 
   async function ask(q) {

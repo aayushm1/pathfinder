@@ -47,7 +47,7 @@ svg{display:block}
 .crumbs b{color:var(--ink);font-weight:600}
 .search{flex:1;max-width:460px;margin-left:12px;display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 12px;color:var(--ink4);cursor:text;transition:.15s}
 .search:hover{border-color:#C9C3FF;box-shadow:0 0 0 4px rgba(91,75,245,.08)}
-.search span{flex:1;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.search span:not(.kbd){flex:1;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .kbd{font-size:11px;border:1px solid var(--line);border-radius:6px;padding:1px 6px;color:var(--ink3);background:var(--bg)}
 .tb-right{margin-left:auto;display:flex;align-items:center;gap:10px}
 .date-chip{font-size:12px;color:var(--ink3);background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 11px;display:flex;gap:6px;align-items:center;white-space:nowrap}
@@ -351,3 +351,4 @@ select.sel{border:1px solid var(--line);border-radius:9px;padding:6px 10px;backg
   @page{size:landscape;margin:0}
 }
 @media (max-width:1560px){.date-chip{display:none}}
+body.shot .fab{display:none!important}
